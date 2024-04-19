@@ -1,7 +1,4 @@
-use http_req::{request::Method, request::Request, uri::Uri};
-// use log;
 use reqwest::header::{HeaderMap, HeaderValue, CONTENT_TYPE, USER_AGENT};
-// use reqwest::{header, Client};
 use secrecy::Secret;
 use serde::Deserialize;
 use std::collections::HashMap;
@@ -22,7 +19,7 @@ use async_openai::{
 pub async fn chain_of_chat(
     sys_prompt_1: &str,
     usr_prompt_1: &str,
-    chat_id: &str,
+    _chat_id: &str,
     gen_len_1: u16,
     usr_prompt_2: &str,
     gen_len_2: u16,

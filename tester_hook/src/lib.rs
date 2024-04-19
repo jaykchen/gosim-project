@@ -10,7 +10,6 @@ use mysql_async::*;
 use serde::{Deserialize, Serialize};
 use serde_json::{json, Value};
 use std::collections::HashMap;
-use std::env;
 use webhook_flows::{
     create_endpoint, request_handler,
     route::{get, post, route, RouteError, Router},
