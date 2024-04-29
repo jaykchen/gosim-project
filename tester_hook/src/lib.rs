@@ -128,7 +128,7 @@ async fn check_vdb_by_post_handler(
         }
     };
     if let Some(text) = load.text {
-        match search_collection(&text, "gosim_search").await {
+        match search_collection_hybrid(&text, "gosim_search").await {
             Ok(search_result) => {
                 send_response(
                     200,
