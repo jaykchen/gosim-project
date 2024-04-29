@@ -146,7 +146,7 @@ async fn search_handler(
     };
 
     let query = load.query;
-    match search_collection(&query, "gosim_search").await {
+    match search_collection_hybrid(&query, "gosim_search").await {
         Ok(search_result) => {
             let search_result_str = json!(search_result).to_string();
 
